@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="imgs/terminal-board-3378232_640-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+
+
+    <input type="text" id="taskInput" placeholder="Digite uma tarefa">
+    <button onclick="addTask()" class="button1">Adicionar Tarefa</button>
+    <ul id="taskList">
+        <!-- lista de tarefas será inserida aqui -->
+    </ul>
+
+    <div class="text1">
+        <p>Este site foi feito para aprender à como fazer uma lista de tarefas usando script e html. Ao término da lição fomos liberados para formatar o site ao nosso gosto (claro, sem fazer uma bizarrice). O resultado final é este.</p>
+    </div>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+            var taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                var taskList = document.getElementById("taskList");
+                var li = document.createElement("li");
+                li.className = "taskItem"; 
+                // adiciona um nome de classe
+                li.innerHTML = taskText + '<button onclick="removeTask(this)" class="button2">Remover</button>';
+                taskList.appendChild(li);
+                // appendChild serve para adicionar um elemento "filho"
+                taskInput.value = "";
+            } else {
+                alert("Por favor, insira uma tarefa válida.");
+            }
+        }
+
+        function removeTask(button) {
+            var li = button.parentNode;
+            // parentNode é o elemento pai, no caso acima meche no elemento pai do botão
+            var ul = li.parentNode;
+            ul.removeChild(li);
+        }
+
+        document.getElementById("taskInput").addEventListener
+        ("keypress", function (event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        }
+        );
+
+    </script>
+
+
+    <footer>
+        <p>Site Feito por Israel Salvalaio Nunes | Finalizado em 14/03/2024 &copy;</p>
+    </footer>
+    
+
+</body>
+</html>

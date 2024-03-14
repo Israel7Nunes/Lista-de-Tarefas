@@ -1,0 +1,103 @@
+:root{
+    --color1: #482c21;
+    --color2: #a73e2b;
+    --color3: #d07e0e;
+    --color4: #e9deb0;
+    --color5: #2f615e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color4);
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color1);
+}
+
+h1{
+    padding: 1%;
+    background-color: #d07e0e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px;
+    color: azure;
+}
+
+
+#taskInput{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    width: 15vw;
+    height: 10vh;
+    font-size: 1.5em;
+}
+
+button{
+    border-radius: 4px;
+}
+
+.button1{
+    background-color: var(--color1);
+    color: azure;
+    font-size: 1.3em;
+}
+
+.button2{
+    background-color: var(--color2);
+    color: azure;
+    margin-left: 5%;
+}
+
+ul{
+    background-color: var(--color5);
+    max-width: 50vw;
+    padding: 2%;
+    position: relative;
+    left: 3%;
+    border-radius: 8px;
+}
+
+.taskItem{
+    margin-top: 1%;
+    margin-left: 4%;
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eeeaea;
+}
+
+.text1{
+    background-color: #a73e2b;
+    position: absolute;
+    left: 60%;
+    bottom: 30%;
+    max-width: 35vw;
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.text1 p{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+    background-color: var(--color1);
+    position: relative;
+    bottom: -35.2vh;    
+}
+
+footer p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100vw;
+}
